@@ -1,7 +1,79 @@
+
+/* COLOR SCHEMES! */
+/*
+1
+--dark-liver: #484041ff;
+--purple-navy: #434371ff;
+--green-sheen: #79aea3ff;
+--light-green: #70ee9cff;
+--green-lizard: #b5f44aff;
+2
+--dark-olive-green: #606c38ff;
+--kombu-green: #283618ff;
+--cornsilk: #fefae0ff;
+--fawn: #dda15eff;
+--liver-dogs: #bc6c25ff;
+3
+--ash-gray: #cad2c5ff;
+--dark-sea-green: #84a98cff;
+--hookers-green: #52796fff;
+--dark-slate-gray: #354f52ff;
+--charcoal: #2f3e46ff;
+*/
+body {
+  padding-top: 60px;
+}
+
+small {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:link {
+  color: black;
+  font-weight:500;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
 p {
-  color:red;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
-  color:green;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+.topbar {
+  background-color: #84a98cff;
+  font-family: 'Montserrat', sans-serif;
+  position:fixed;
+  width:100%;
+  z-index:1;
+  top:0;
 }
