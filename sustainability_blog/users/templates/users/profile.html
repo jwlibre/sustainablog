@@ -6,6 +6,17 @@
   <div class="media">
     <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="">
   </div>
+  <form method="POST" enctype="multipart/form-data"><!--need enctype to save images-->
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Update profile</legend>
+      {{ u_form.as_p }}
+      {{ p_form.as_p }}
+    </fieldset>
+    <div class="form-group">
+      <button type="submit" class="btn btn-outline-info">Update</button>
+    </div>
+  </form>
 </div>
 
 {% endblock content %}

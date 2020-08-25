@@ -31,7 +31,6 @@ small {
 
 a:link {
   color: black;
-  font-weight:500;
 }
 
 /* visited link */
@@ -42,8 +41,7 @@ a:visited {
 /* mouse over link */
 a:hover {
   color: black;
-  font-weight: 900;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* selected link */
@@ -76,4 +74,8 @@ legend {
   width:100%;
   z-index:1;
   top:0;
+}
+
+.author-image {
+  
 }

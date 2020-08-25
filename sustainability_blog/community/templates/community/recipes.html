@@ -3,6 +3,7 @@
     <h1>RECIPES COMMUNITY PAGE</h1>
     {% for post in posts %}
       <h2>{{ post.title }}</h2>
+      <img class="rounded-circle author-image" src="{{ post.author.profile.image.url }}" alt="">
       <p>by {{ post.author }} on {{ post.date_posted|date:"d F, Y" }}</p>
       <p>{{ post.intro_paragraph }}</p>
       <h3>Ingredients</h3>
