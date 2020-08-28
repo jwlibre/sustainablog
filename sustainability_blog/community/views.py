@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Recipe
+from django.contrib.auth.forms import AuthenticationForm
 
 # TO-DO - replace dummy homepage posts with widgets showing top posts from different categories
 posts = [
@@ -18,7 +20,13 @@ posts = [
 ]
 
 def landing(request):
-    return render(request, 'community/landing.html')
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('home')
+    else:
+        context = {
+        'form': AuthenticationForm()
+        }
+        return render(request, 'community/landing.html', context)
 
 def home(request):
     context = {

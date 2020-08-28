@@ -1,6 +1,5 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
@@ -11,7 +10,7 @@ def register(request):
             form.save() # saves user to table, easy!
             username = form.cleaned_data.get('username')
             messages.success(request, 'Account created successfully, you are now able to log in.')
-            return redirect('login') #name given to url pattern for homepage
+            return redirect('login')
         else:
             messages.error(request, 'Error creating user.')
     else:

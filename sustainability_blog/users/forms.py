@@ -11,7 +11,6 @@ class UserRegisterForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2'] # the fields we want shown on the form, and the order in which they are shown
 
 
-
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 

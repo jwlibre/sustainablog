@@ -13,13 +13,17 @@
 --cornsilk: #fefae0ff;
 --fawn: #dda15eff;
 --liver-dogs: #bc6c25ff;
-3
+3 *****
 --ash-gray: #cad2c5ff;
 --dark-sea-green: #84a98cff;
 --hookers-green: #52796fff;
 --dark-slate-gray: #354f52ff;
 --charcoal: #2f3e46ff;
 */
+input {
+  font-size: 20px;
+}
+
 body {
   padding-top: 60px;
 }
@@ -76,6 +80,29 @@ legend {
   top:0;
 }
 
+.landing-login-box {
+  border: 2px solid #cad2c5ff;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width:400px;
+}
+
+.landing-login-form {
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.landing-login-box-frame {
+  padding-top: 100px;
+}
+
+.landing-content {
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .author-image {
-  
+
 }
