@@ -10,8 +10,8 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self): # this is how to overwrite builtin methods
-        super().save() # runs the save method of the parent class
+    def save(self, *args, **kwargs): # this is how to overwrite builtin methods
+        super().save(*args, **kwargs) # runs the save method of the parent class
 
         img = Image.open(self.image.path)
 

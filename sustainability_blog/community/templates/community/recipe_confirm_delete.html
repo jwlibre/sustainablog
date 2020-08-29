@@ -1,0 +1,16 @@
+{% extends "community/base.html" %}
+{% block content %}
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Delete recipe</legend>
+          <h2>Are you sure you want to delete the "{{ object.title }}" recipe?</h2>
+        </fieldset>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-danger">Yes, I'm sure, delete</button>
+          <a class="btn btn-outline-secondary" href="{% url 'community-recipe-detail' object.id %}">Cancel</a>
+        </div>
+      </form>
+    </div>
+{% endblock content %}

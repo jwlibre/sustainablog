@@ -18,7 +18,13 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from users import views as user_views # alternative method to the include and creating a separate urls.py in each app
 from community import views as community_views
-
+from community.views import (
+    RecipeListView,
+    RecipeDetailView,
+    RecipeCreateView,
+    RecipeUpdateView,
+    RecipeDeleteView
+)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,7 +32,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', community_views.landing, name='community-landing'),
     path('home/', community_views.home, name='community-home'),
-    path('recipes/', community_views.recipes, name='community-recipes'),
+    # path('recipes/', community_views.recipes, name='community-recipes'),
+    path('recipes/', RecipeListView.as_view(), name='community-recipes'),
+    path('recipes/<int:pk>/', RecipeDetailView.as_view(), name='community-recipe-detail'),
+    path('recipes/new/', RecipeCreateView.as_view(), name='community-recipe-create'),
+    path('recipes/<int:pk>/update/', RecipeUpdateView.as_view(), name='community-recipe-update'),
+    path('recipes/<int:pk>/delete/', RecipeDeleteView.as_view(), name='community-recipe-delete'),
     path('fashion/', community_views.fashion, name='community-fashion'),
     path('about/', community_views.about, name='community-about'),
     path('register/', user_views.register, name='register'),

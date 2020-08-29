@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 def get_sentinel_user():
     return get_user_model().objects.get_or_create(username='deleted user')[0]
@@ -18,3 +19,6 @@ class Recipe(models.Model):
     # return the title
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('community-recipe-detail', kwargs={'pk': self.pk}) # returns path AS A STRING, not a redirect

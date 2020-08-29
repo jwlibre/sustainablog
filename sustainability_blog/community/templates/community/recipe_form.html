@@ -1,0 +1,15 @@
+{% extends "community/base.html" %}
+{% block content %}
+    <div>
+      <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Create / Update Recipe</legend>
+          {{ form.as_p }}
+        </fieldset>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-info">Post</button>
+        </div>
+      </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "community/base.html" %}
+{% block content %}
+<!-- USES NAME "object" TO MATCH DJANGO NAMING CONVENTIONS -->
+    <h2>{{ object.title }}</h2>
+    <img class="rounded-circle author-image" src="{{ post.author.profile.image.url }}" alt="">
+    <p>by {{ object.author }} on {{ object.date_posted|date:"d F, Y" }}</p>
+    <div>
+      {% if object.author == user %}
+        <a href="{% url 'community-recipe-update' object.id %}">Edit</a>
+        <a href="{% url 'community-recipe-delete' object.id %}">Delete</a>
+      {% endif %}
+    </div>
+    <p>{{ object.intro_paragraph }}</p>
+    <h3>Ingredients</h3>
+    <p>{{ object.ingredients }}</p>
+    <h3>Method</h3>
+    <p>{{ object.method }}</p>
+{% endblock content %}
