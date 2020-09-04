@@ -94,13 +94,36 @@ legend {
 }
 
 .landing-login-box-frame {
-  padding-top: 100px;
+  vertical-align: middle;
+  justify-content: center;
 }
 
 .landing-content {
-  padding-top: 100px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.form-label {
+  padding-top: 15px;
+  display: block;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.btn-outline-info {
+  color: black;
+  border-color: #52796fff;
+}
+
+.btn-outline-info:hover {
+  background-color: #52796fff;
+    border-color: #52796fff;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }
 
 .author-image {
